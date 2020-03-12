@@ -1,0 +1,14 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  /* Don't use px in the root element, because user can't change px anymore. */
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+}
