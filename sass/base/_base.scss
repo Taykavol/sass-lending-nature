@@ -8,7 +8,23 @@
 html {
   /* Don't use px in the root element, because user can't change px anymore. */
   font-size: 62.5%;
+
+
+  
+  @include respond(tab-land) {
+    font-size: 56.25%;                   //1rem = 9px  9/16=
+  }
+  @include respond(tab-view) {
+    font-size: 50%;
+  }
+  @include respond(desktop-big) {
+    font-size: 75%;                     //1rem = 12px 12/16
+  }
 }
 body {
   box-sizing: border-box;
+  padding: 3rem;
+  @include respond(tab-land) {
+    padding: 0rem;
+  }
 }

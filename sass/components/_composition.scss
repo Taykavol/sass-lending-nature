@@ -1,0 +1,55 @@
+.composition {
+    position: relative;
+    &__photo {
+        z-index: 10;
+        position: absolute;
+        width: 30rem;
+        transition: all .2s;
+        outline-offset: 2rem;
+
+
+        @include respond(tab-view) {
+            float: left;
+            position: relative;
+            width: 33.333%;
+        }
+
+        &--p1 {
+            left: 0;
+            top:-.6rem;
+            @include respond(tab-view) {
+                top:0;
+            }
+        }
+        
+        &--p2 {
+            right: 0;
+            top:1.6rem;
+            @include respond(tab-view) {
+                top:0;
+                transform: scale(1.2);
+                z-index: 11;
+            }
+        }
+        &--p3 {
+            top:10rem;
+            left: 20%;
+            @include respond(tab-view) {
+                top:0;
+                left: 0;
+            }
+        }
+        &:hover {
+            outline: 1rem solid $green-primary;
+            z-index: 20;
+            transform: scale(1.2);
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(0.9);
+        @include respond(tab-view) {
+            transform: scale(1);
+        }
+    }
+}

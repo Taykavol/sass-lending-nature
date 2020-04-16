@@ -1,0 +1,15 @@
+.u-center-text {
+  text-align: center !important;
+}
+.u-margin-bottom-8 {
+  margin-bottom: 8rem !important;
+  @include respond(tab-view) {
+    margin-bottom: 6rem !important;
+  }
+  @include respond(phone) {
+    margin-bottom: 4rem !important;
+  }
+}
+.u-margin-b-2 {
+  margin-bottom: 2rem !important;
+}
